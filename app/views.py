@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 from app.forms import *
-
+from django.core.mail import send_mail
 
 def registration(request):
     ufo=UserForm()
@@ -30,6 +30,24 @@ def registration(request):
             MPFDO.username=MUFDO
             #here we are getting username column from another table i.e User table
             MPFDO.save()
+
+            send_mail(
+                'registration',
+                'registration successfull',
+                'vikranth15.6.1995@gmail.com',
+                ['MUFDO.email'],
+                fail_silently=True
+            )
+            #send_mail('subject of mail in str','msg in str'
+            #'from mail id in str i.e it is application or company mail id'
+            #'user mail id who is signup from html page we need to give in list'
+            #it is coming in user object format in string
+            #if we are giving manually we need to give in str format
+            #fail_silently=True it will handle error and it will not show error
+            #if we five False it will not handle and throw error
+
+
+
             return HttpResponse('registration is successfull')
         else:
             return HttpResponse('invalid')

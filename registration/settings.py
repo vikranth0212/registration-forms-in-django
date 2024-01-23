@@ -16,6 +16,12 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='vikranth15.6.1995@gmail.com'
+EMAIL_HOST_PASSWORD='fmcg jwes sqac macn'
+EMAIL_USE_TLS=True
+EMAIL_USE_SSL=False
+EMAIL_PORT=587
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
