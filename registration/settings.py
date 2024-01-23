@@ -17,8 +17,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='vikranth15.6.1995@gmail.com'
-EMAIL_HOST_PASSWORD='fmcg jwes sqac macn'
+EMAIL_HOST_USER='vikranthfullstack@gmail.com'
+EMAIL_HOST_PASSWORD='fzxf qakj zhus obon'
 EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
 EMAIL_PORT=587

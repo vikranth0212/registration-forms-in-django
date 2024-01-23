@@ -35,8 +35,8 @@ def registration(request):
                 'registration',
                 'registration successfull',
                 'vikranth15.6.1995@gmail.com',
-                ['MUFDO.email'],
-                fail_silently=True
+                [MUFDO.email],
+                fail_silently=False
             )
             #send_mail('subject of mail in str','msg in str'
             #'from mail id in str i.e it is application or company mail id'
