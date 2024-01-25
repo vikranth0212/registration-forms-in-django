@@ -92,6 +92,16 @@ def user_login(request):
             return HttpResponse('invalid credentials')
     return render(request,'user_login.html') 
 
+
+#logout
+@login_required
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('home'))
+    
+
+
+
 # for profile display
 @login_required
 def profile_display(request):
@@ -101,3 +111,5 @@ def profile_display(request):
     d={'UO':UO,'PO':PO}
 
     return render(request,'profile_display.html',d)
+
+
