@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
 # Create your views here.
 from app.forms import *
+from app.models import *
 from django.core.mail import send_mail
 from django.urls import reverse
 from django.contrib.auth import authenticate,login
@@ -10,7 +11,7 @@ from django.contrib.auth import authenticate,login
 def registration(request):
     ufo=UserForm()
     pfo=ProfileForm()
-    d={'ufo1':ufo,'pfo1':pfo}
+    d={'ufo':ufo,'pfo':pfo}
 
     #checking post method is activated or not
 

@@ -10,8 +10,8 @@
         <h1>Registration Form</h1>
         <form method='POST' and enctype="multipart/form-data">
             {% csrf_token %}
-            {{ufo1.as_p}}
-            {{pfo1.as_p}}
+            {{ufo.as_p}}
+            {{pfo.as_p}}
             <input type="submit" value="register">
         </form>    
     </center>
