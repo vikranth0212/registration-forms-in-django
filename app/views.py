@@ -5,7 +5,8 @@ from app.forms import *
 from app.models import *
 from django.core.mail import send_mail
 from django.urls import reverse
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import login_required
 
 
 def registration(request):
@@ -91,7 +92,12 @@ def user_login(request):
             return HttpResponse('invalid credentials')
     return render(request,'user_login.html') 
 
-# @login_required
-# def profile_display(request):
-#     un=request.session.get('username')
-#     UO=User.objects.get()
+# for profile display
+@login_required
+def profile_display(request):
+    un=request.session.get('username')
+    UO=User.objects.get(username=un)
+    PO=Profile.objects.get(username=UO)
+    d={'UO':UO,'PO':PO}
+
+    return render(request,'profile_display.html',d)
