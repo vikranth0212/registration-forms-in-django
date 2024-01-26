@@ -28,6 +28,8 @@ urlpatterns = [
     path('home/',home,name='home'),
     path('profile_display/',profile_display,name='profile_display'),
     path('user_logout/',user_logout,name='user_logout'),
+    path('change_password/',change_password,name='change_password'),
+    path('reset_password/',reset_password,name='reset_password'),
     
 
 
